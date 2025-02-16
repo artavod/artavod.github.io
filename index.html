@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intergalactic Dessert Solutions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #003366;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 100px;
+            border-bottom: #ff6600 5px solid;
+        }
+        header h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            transition: background 0.3s ease;
+        }
+        nav a:hover {
+            background: #ff6600;
+            border-radius: 5px;
+        }
+        .content {
+            margin-top: 20px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #003366;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        ul {
+            list-style-type: square;
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #ff6600;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #cc5200;
+        }
+        footer {
+            background: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+        }
+        .logo {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .logo img {
+            max-width: 200px;
+            height: auto;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .stats div {
+            flex: 1;
+            padding: 20px;
+            background: #f4f4f4;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .stats div:hover {
+            transform: scale(1.05);
+        }
+        .stats h3 {
+            color: #003366;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .stats p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-card h3 {
+            color: #003366;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .testimonials {
+            background: #f4f4f4;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .testimonials h3 {
+            color: #003366;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .testimonials p {
+            font-size: 1.1em;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Intergalactic Dessert Solutions</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#mission">Миссия</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#testimonials">Отзывы</a>
+            <a href="#contact">Контакты</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="logo">
+            <img src="https://i.imgur.com/7Tz0Pqb.jpg" alt="Логотип Intergalactic Dessert Solutions">
+        </div>
+
+        <div class="content" id="about">
+            <h2>О нас</h2>
+            <p>Intergalactic Dessert Solutions — лидер в области инновационных решений для замороженных десертов. Наша компания работает на межгалактическом уровне, предоставляя высококачественные продукты и услуги для клиентов по всей Вселенной.</p>
+            <p>С 2023 года мы активно развиваемся, внедряя передовые технологии и создавая уникальные вкусы, которые покоряют сердца и вкусовые рецепторы.</p>
+        </div>
+
+        <div class="stats">
+            <div>
+                <h3>47+</h3>
+                <p>Галактик обслуживаем</p>
+            </div>
+            <div>
+                <h3>5000+</h3>
+                <p>Клиентов по всей Вселенной</p>
+            </div>
+            <div>
+                <h3>100%</h3>
+                <p>Удовлетворенность клиентов</p>
+            </div>
+        </div>
+
+        <div class="content" id="services">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Производство</h3>
+                    <p>Создание уникальных замороженных десертов с использованием космических ингредиентов.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Логистика</h3>
+                    <p>Межгалактическая доставка мороженого в любую точку Вселенной.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Обучение</h3>
+                    <p>Сертификация мастеров мороженого и обучение новым технологиям.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Исследования</h3>
+                    <p>Разработка новых вкусов и текстур с использованием передовых технологий.</p>
+                </div>
+            </div>
+            <a href="#contact" class="cta-button">Связаться с нами</a>
+        </div>
+
+        <div class="content" id="mission">
+            <h2>Наша миссия</h2>
+            <p>Мы стремимся привнести радость и удовольствие в каждый уголок Вселенной, создавая продукты, которые объединяют галактики. Наша цель — стать лидером в индустрии замороженных десертов, предлагая инновационные решения и высочайшее качество.</p>
+        </div>
+
+        <div class="content" id="gallery">
+            <h2>Галерея</h2>
+            <div class="gallery">
+                <img src="https://i.imgur.com/7Tz0Pqb.jpg" alt="Мороженое 1">
+                <img src="https://i.imgur.com/LyHc8.gif" alt="Мороженое 2">
+                <img src="https://i.imgur.com/9ZQZ.gif" alt="Мороженое 3">
+                <img src="https://i.imgur.com/3QZQZ.gif" alt="Мороженое 4">
+            </div>
+        </div>
+
+        <div class="testimonials" id="testimonials">
+            <h3>Отзывы наших клиентов</h3>
+            <p>"Лучшее мороженое во Вселенной! Спасибо Intergalactic Dessert Solutions за вашу работу!" — Клиент с Альфа Центавры</p>
+            <p>"Мы заказали мороженое для нашей планеты, и оно стало хитом! Все в восторге!" — Представитель Туманности Андромеды</p>
+        </div>
+
+        <div class="content" id="contact">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами, чтобы узнать больше о наших услугах или обсудить сотрудничество:</p>
+            <ul>
+                <li>Электронная почта: <a href="mailto:info@intergalacticdesserts.com">info@intergalacticdesserts.com</a></li>
+                <li>Телефон: +7 (800) 555-35-35</li>
+                <li>Адрес: Галактика Млечный Путь, Планета Земля, Улица Инноваций, 42</li>
+            </ul>
+            <a href="mailto:info@intergalacticdesserts.com" class="cta-button">Написать нам</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Intergalactic Dessert Solutions. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
