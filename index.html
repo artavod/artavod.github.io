@@ -1,29 +1,237 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Межгалактическое Мороженное</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Межгалактическое Мороженное</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* === Глобальные стили === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      background-color: #fff0f6; 
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* === Навигация === */
+    header {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+      padding: 20px 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    /* === Секции сайта === */
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #ff7ca8;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .about p {
+      margin-bottom: 15px;
+    }
+
+    .products .product {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+      border: 1px solid #ffe3dc;
+    }
+
+    .products .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .products .product img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    /* === Кнопки === */
+    .button {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(255, 122, 168, 0.3);
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(255, 122, 168, 0.4);
+    }
+
+    /* === Подвал === */
+    footer {
+      background-color: #ff9a9e;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.95em;
+      margin-top: 60px;
+    }
+
+    /* === Адаптивность === */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        margin: 40px 20px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О компании</a></li>
-                <li><a href="products.html">Продукты</a></li>
-                <li><a href="contact.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Добро пожаловать в Межгалактическое Мороженное!</h1>
-        <p>Лучшее мороженное во вселенной!</p>
-        <img src="images/main.jpg" alt="Главное изображение">
-    </main>
-    <footer>
-        <p>&copy; 2023 Межгалактическое Мороженное</p>
-    </footer>
+
+  <!-- Шапка -->
+  <header>
+    <h1>Межгалактическое Мороженное</h1>
+    <nav>
+      <ul>
+        <li><a href="#main">Главная</a></li>
+        <li><a href="#about">О компании</a></li>
+        <li><a href="#products">Продукты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Главная секция -->
+  <section id="main">
+    <h2>Добро пожаловать!</h2>
+    <p>Мы — компания «Межгалактическое Мороженное», основанная Бараком Обамой в далёком 2023 году. Мы создаём мороженое, которое нравится не только людям, но и инопланетным гостям!</p>
+    <img src="https://via.placeholder.com/800x400.png?text=Звездное+мороженое" alt="Главное изображение">
+  </section>
+
+  <!-- О компании -->
+  <section id="about">
+    <h2>О компании</h2>
+    <div class="about">
+      <img src="https://via.placeholder.com/400x250.png?text=Барак+Обама" alt="Фото директора">
+      <p>Наш директор — Барак Обама, бывший президент США, ныне путешествует по галактикам и делает мир вкуснее.</p>
+      <p>Цель нашей компании — сделать мороженое доступным всем формам жизни во Вселенной. Мы используем экологичные технологии и инопланетные рецепты.</p>
+      <a href="#contact" class="button">Связаться с нами</a> 
+    </div>
+  </section>
+
+  <!-- Продукты -->
+  <section id="products" class="products">
+    <h2>Наши продукты</h2>
+    <div class="product">
+      <img src="https://via.placeholder.com/800x400.png?text=Вкус+Вселенной" alt="Продукт 1">
+      <h3>Вкус Вселенной</h3>
+      <p>Мороженое с добавками звёздной пыли и лунного сахара. Уникальный вкус, который можно попробовать только у нас.</p>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/800x400.png?text=Антигравитационный+пломбир" alt="Продукт 2">
+      <h3>Антигравитационный пломбир</h3>
+      <p>Легко взлетайте в воздух, пробуя это мороженое. Лучше всего есть в невесомости.</p>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact">
+    <h2>Контакты</h2>
+    <div class="contact">
+      <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+      <p><strong>Email:</strong> info@intergalacticicecream.com</p>
+      <p><strong>Адрес:</strong> Галактика Млечный Путь, Земля</p>
+      <a href="#main" class="button">Наверх</a> 
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer>
+    &copy; 2025 Межгалактическое Мороженное. Все права защищены.
+  </footer>
+
 </body>
 </html>
