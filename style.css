@@ -1,47 +1,117 @@
-/* Общие стили */
-body {
-    font-family: Arial, sans-serif;
+/* === Общие настройки === */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header nav ul {
-    list-style: none;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff8f5;
+    color: #333;
     padding: 0;
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
 }
 
-header nav ul li a {
-    color: white;
+a {
     text-decoration: none;
-    padding: 10px 20px;
+    color: inherit;
 }
 
-header nav ul li a:hover {
-    background-color: #555;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
-main {
-    padding: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
+/* === Шапка сайта === */
+header {
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
     color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Адаптивность */
-@media (max-width: 600px) {
-    header nav ul {
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* === Основной контент === */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    color: #ff7ca8;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* === Страница продуктов === */
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* === Подвал === */
+footer {
+    background-color: #ff9a9e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* === Адаптивность под мобильные устройства === */
+@media (max-width: 768px) {
+    nav ul {
         flex-direction: column;
+        align-items: center;
     }
 
-    header nav ul li {
-        text-align: center;
-        width: 100%;
+    main {
+        margin: 20px;
     }
 }
